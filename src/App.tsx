@@ -4,7 +4,7 @@ import { total } from "./utils";
 
 const reviews = [
   {
-    name: "Evondev",
+    name: "TranVanDat",
     image: "",
     stars: 5,
     premiumUser: true,
@@ -28,6 +28,18 @@ const reviews = [
 
 function App() {
   const [count, setCount] = React.useState(0);
+  function displayReview(
+    lenReview: number,
+    nameReview: string,
+    premiumUser: boolean
+  ) {
+    return (
+      <React.Fragment>
+        Review total <strong>{lenReview}</strong> | Last reviewed by{" "}
+        <strong>{nameReview}</strong> {premiumUser ? "⭐️" : ""}
+      </React.Fragment>
+    );
+  }
   return (
     <div>
       <div className="review">
@@ -35,8 +47,11 @@ function App() {
           <img src="https://source.unsplash.com/random" alt="" />
         </div>
         <div className="review-info">
-          Review total <strong>3</strong> | Last reviewed by{" "}
-          <strong>Evondev</strong> ⭐️
+          {displayReview(
+            reviews.length,
+            reviews[0].name,
+            reviews[0].premiumUser
+          )}
         </div>
       </div>
     </div>

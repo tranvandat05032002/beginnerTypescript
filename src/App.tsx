@@ -1,4 +1,5 @@
 import React from "react";
+import Basic from "./basic/Basic";
 import "./App.css";
 import { total } from "./utils";
 
@@ -41,20 +42,23 @@ function App() {
     );
   }
   return (
-    <div>
-      <div className="review">
-        <div className="review-image">
-          <img src="https://source.unsplash.com/random" alt="" />
-        </div>
-        <div className="review-info">
-          {displayReview(
-            reviews.length,
-            reviews[0].name,
-            reviews[0].premiumUser
-          )}
+    <React.Fragment>
+      <div>
+        <div className="review">
+          <div className="review-image">
+            <img src="https://source.unsplash.com/random" alt="" />
+          </div>
+          <div className="review-info">
+            {displayReview(
+              reviews.length,
+              reviews[0].name,
+              reviews[0].premiumUser
+            )}
+          </div>
         </div>
       </div>
-    </div>
+      <Basic></Basic>
+    </React.Fragment>
   );
 }
 

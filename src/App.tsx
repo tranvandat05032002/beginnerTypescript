@@ -1,9 +1,14 @@
 import React from "react";
 import Basic from "./basic/Basic";
 import "./App.css";
-import { total } from "./utils";
 
-const reviews = [
+const reviews: {
+  name: string;
+  image: string;
+  stars: number;
+  premiumUser: boolean;
+  date: string;
+}[] = [
   {
     name: "TranVanDat",
     image: "",
@@ -26,6 +31,36 @@ const reviews = [
     date: "04/08/2022",
   },
 ];
+
+const travelItem: {
+  image: string;
+  name: string;
+  totalReview: number;
+  rating: number;
+  location: string;
+  price: number;
+  date: string;
+  departure: string;
+  features: { wifi: boolean; parking: boolean; offer: boolean };
+}[] = [
+  {
+    image: "abc",
+    name: "DaNang",
+    totalReview: 167,
+    rating: 4.8,
+    location: "Vietnam",
+    price: 48.37,
+    date: "August 5th - August 9th ",
+    departure: "nmg",
+    features: {
+      wifi: true,
+      parking: true,
+      offer: true,
+    },
+  },
+];
+
+console.log(travelItem);
 
 function App() {
   const [count, setCount] = React.useState(0);
@@ -57,7 +92,6 @@ function App() {
           </div>
         </div>
       </div>
-      <Basic></Basic>
     </React.Fragment>
   );
 }

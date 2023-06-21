@@ -10,8 +10,8 @@ const ourTuple: [number, boolean, string] = [5, false, "Coding God was here"];
 const outTuple2: [x: number, y: string] = [3, "abc"];
 console.log(outTuple2, ourTuple);
 
-const person: {name: string, age: number, gioitinh: boolean} = {
+const person: { name: string; age: number; gioitinh: boolean } = {
   name: "tranvandat",
   age: 21,
-  gioitinh: false
-}
+  gioitinh: false,
+};

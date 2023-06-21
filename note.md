@@ -108,7 +108,7 @@ mục 9: typescript casting (as, <>)
   }
   console.log(createPair<string, number>('hello', 42));
 
-- mục 11: TypeScript Utility Types (Partial, Required, Record, Omit, Pick, Exclude)
+- mục 11: TypeScript Utility Types (Partial, Required, Record, Omit, Pick, Exclude, ReturnType)
 
 * Partial: thay đổi tất cả properties của một object thành các optional
   vd:
@@ -146,7 +146,6 @@ pointPart.x = 10;
 
 const bob: Omit<Person, 'age' | 'location'> = {
 name: 'Bob'
-// `Omit` has removed age and location from the type and they can't be defined here
 };
 
 - Pick: xóa tất cả các đối tượng của object nhưng trừ các khóa được chỉ ra trong Pick
@@ -164,3 +163,11 @@ name: 'Bob'
 vd:
 type Primitive = number|string|boolean;
 const value: Exclude<Primitive, boolean> = number or string (if pass a boolean ==> Error)
+
+- ReturnType: trích xuất kiểu trả về của một hàm.
+  vd:
+  type PointGenerator = () => { x: number; y: number; };
+  const point: ReturnType<PointGenerator> = {
+  x: 10,
+  y: 20
+  };

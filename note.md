@@ -1,5 +1,17 @@
 mục 1: Khai báo 1 biến: const name: type = value
 //any: truyền vào bất kỳ
+//unknown:
+vd: const aNumber: unknown;
+aNumber = 100;
+if(typeof anNumber === "number"){
+aNumber.toFixed(2);
+// do something with type is number.
+}
+//Never: không có giá trị, và thường sử dụng trong ngoại lệ và trả về một lỗi, tạo 1 vòng lặp vô hạn
+vd:
+function raiseError(err: string): never{
+throw new Error(err);
+}
 //?: : có giá trị truyền vào hay không cũng k báo lỗi
 
 mục 2: Khai báo 1 array:
@@ -7,7 +19,7 @@ const name: type[] = []
 //readonly: không làm thay đổi mảng
 
 mục 3: TypeScript Tuples:
-định nghĩa: có nhiều kiểu dữ liệu bên trong 1 mảng:
+định nghĩa: có nhiều kiểu dữ liệu bên trong 1 mảng và cố định:
 vd: const ourTuple: [number, boolean, string] = [5, false, "tranvandat"];
 //có tính chất của readonly như mảng
 hoặc: const outTuple: [x: number, y: string] = [3, "abc"];
@@ -49,7 +61,8 @@ year: CarYear,
 type: CarType,
 model: CarModel
 }
-//Interfaces: tương tự như aliases nhưng chỉ dành cho các object
+//Interfaces: tương tự như aliases nhưng chỉ dành cho các object, tái sử dụng kiểu dữ liệu đã định nghĩa ở nhiều nơi.
+//notes: khi name trùng nhau thì nó sẽ merge.
 interface car {
 name: string,
 height: number,
@@ -65,7 +78,7 @@ width: 30
 vd: childrenInterface extends parentInterface {
 định nghĩa interface muốn thêm tại đây
 }
-mục 7: TypeScript Union Types ("|")
+mục 7: TypeScript Union and assertions Types ("|", "&")
 -Muốn một biến có nhiều hơn 1 kiểu dữ liệu
 vd:
 function printStatusCode(code: string | number) {
@@ -74,6 +87,7 @@ console.log(`My status code is ${code}.`)
 printStatusCode(404);
 printStatusCode('404');
 
+type Assertions = Interface1 & Interface2 === merger === extends;
 mục 8: TypeScript Functions
 
 - định nghĩa giá trị trả về của một function hoặc không có giá trị trả về (void)

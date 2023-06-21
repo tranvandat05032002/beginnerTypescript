@@ -1,6 +1,6 @@
 import React from "react";
-import Basic from "./basic/Basic";
 import "./App.css";
+import Card from "./component/Card";
 
 const reviews: {
   name: string;
@@ -63,7 +63,7 @@ const travelItem: {
 console.log(travelItem);
 
 function App() {
-  const [count, setCount] = React.useState(0);
+  // const [count, setCount] = React.useState(0);
   function displayReview(
     lenReview: number,
     nameReview: string,
@@ -92,6 +92,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Card description="abc" image="mnv" name="mnb" title="asas"></Card>
     </React.Fragment>
   );
 }

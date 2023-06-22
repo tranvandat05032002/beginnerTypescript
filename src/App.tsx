@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Card from "./component/Card";
+import { parseCoordinate } from "./basic/function";
 
 const reviews: {
   name: string;
@@ -64,6 +65,8 @@ console.log(travelItem);
 
 function App() {
   // const [count, setCount] = React.useState(0);
+  console.log(parseCoordinate({ x: 45, y: 37 }));
+  console.log(parseCoordinate(12, 3));
   function displayReview(
     lenReview: number,
     nameReview: string,

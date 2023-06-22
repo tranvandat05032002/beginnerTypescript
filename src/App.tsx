@@ -92,7 +92,12 @@ function App() {
           </div>
         </div>
       </div>
-      <Card description="abc" image="mnv" name="mnb" title="asas"></Card>
+      <Card
+        title="Title"
+        name="Name"
+        description="Description"
+        image="image.jpg"
+      ></Card>
     </React.Fragment>
   );
 }

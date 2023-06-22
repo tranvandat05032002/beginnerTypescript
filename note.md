@@ -185,3 +185,7 @@ const value: Exclude<Primitive, boolean> = number or string (if pass a boolean =
   x: 10,
   y: 20
   };
+
+mục 12: Functon overloding
+
+- định nghĩa: function overloading là nhiều function cùng tên và mỗi function làm một chức năng nhất định, parameter truyền vào có thể tùy biến.

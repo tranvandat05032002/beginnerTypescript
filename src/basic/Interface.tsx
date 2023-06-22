@@ -4,3 +4,8 @@ export interface ICard {
   description: string;
   image: string;
 }
+// function overloading
+export interface ICordinate {
+  x: number;
+  y: number;
+}

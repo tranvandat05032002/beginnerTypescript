@@ -78,7 +78,7 @@ width: 30
 vd: childrenInterface extends parentInterface {
 định nghĩa interface muốn thêm tại đây
 }
-mục 7: TypeScript Union and assertions Types ("|", "&")
+mục 7: TypeScript Union and intersection Types ("|", "&")
 -Muốn một biến có nhiều hơn 1 kiểu dữ liệu
 vd:
 function printStatusCode(code: string | number) {

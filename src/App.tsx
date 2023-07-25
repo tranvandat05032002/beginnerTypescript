@@ -2,6 +2,8 @@ import React from "react";
 import "./App.css";
 import Card from "./component/Card";
 import { parseCoordinate } from "./basic/function";
+import { device } from "./basic/Keyof";
+import { objQueryResults } from "./basic/search-compare-decoding";
 
 const reviews: {
   name: string;
@@ -67,6 +69,25 @@ function App() {
   // const [count, setCount] = React.useState(0);
   console.log(parseCoordinate({ x: 45, y: 37 }));
   console.log(parseCoordinate(12, 3));
+  // console.log(
+  //   device([
+  //     { name: "tb1", price: 123 },
+  //     {
+  //       name: "tb2",
+  //       price: 456,
+  //     },
+  //   ])
+  // );
+  // console.log(object, "key") --> value
+  const obj = [
+    { name: "tb1", price: 123 },
+    {
+      name: "tb2",
+      price: 456,
+    },
+  ];
+  console.log(device(obj, "name"));
+  console.log(objQueryResults);
   function displayReview(
     lenReview: number,
     nameReview: string,
